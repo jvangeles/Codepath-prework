@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="@+id/todoEntry"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/todoEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_entry"
+        android:inputType="textNoSuggestions"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTodos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/todoEntry"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="15dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
